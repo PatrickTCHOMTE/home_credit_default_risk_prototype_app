@@ -1,5 +1,5 @@
 import pandas as pd
-import sklearn.neighbors.KNeighborsClassifier
+from sklearn.neighbors import KNeighborsClassifier
 import streamlit as st
 import pickle
 
