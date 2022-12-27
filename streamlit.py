@@ -4,7 +4,7 @@ import streamlit as st
 import pickle
 
 # Chargement du modèle KNeighborsClassifier sauvegardé
-model = pickle.load(open('Model Saved/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 # Le cache pour un chargement rapide du modèle
 @st.cache
