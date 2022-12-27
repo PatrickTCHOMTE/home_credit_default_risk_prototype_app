@@ -27,7 +27,7 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied]
 
 
 st.title("Loan's Attribution Predictor")
-st.image("")
+st.image("Bank Loan.jpg")
 st.header("Entrez les données: ")
 EXT_SOURCE_3 = st.number_input('EXT_SOURCE_3:', min_value=0.000527, max_value=0.885488, value=0.499630)
 EXT_SOURCE_2 = st.number_input('EXT_SOURCE_2:', min_value=0.000476, max_value=0.855000, value=0.521936)
