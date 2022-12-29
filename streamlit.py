@@ -68,7 +68,7 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
     if response_predicted == 1:
         st.succes('Loan granted !', icon="✅")
     else:
-        st.write('Loan not granted :-)', icon="🚨")
+        st.error('Loan not granted :-)', icon="🚨")
 
 
 
