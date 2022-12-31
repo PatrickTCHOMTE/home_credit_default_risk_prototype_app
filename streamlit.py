@@ -65,7 +65,7 @@ if st.button('Predict Loan'):
 AMT_REQ_CREDIT_BUREAU_YEAR, NAME_INCOME_TYPE_Working, OBS_60_CNT_SOCIAL_CIRCLE, OBS_30_CNT_SOCIAL_CIRCLE, WEEKDAY_APPR_PROCESS_START_TUESDAY, WEEKDAY_APPR_PROCESS_START_FRIDAY, REGION_RATING_CLIENT, 
 REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
     
-    if response_predicted == 1:
+    if response_predicted == 0:
         st.succes('Loan granted !', icon="✅")
     else:
         st.error('Loan not granted :-)', icon="🚨")
