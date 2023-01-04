@@ -21,8 +21,8 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied]
     
     data = pd.DataFrame([columns_df], columns=columns_df)
     
-    prediction = model_loaded.predict(data)
-    score = model_loaded.predict_proba(data)
+    prediction = model.predict(data)
+    score = model.predict_proba(data)
     
     return prediction[0], score[0] 
     
