@@ -67,15 +67,15 @@ if st.button('Predict Loan'):
 AMT_REQ_CREDIT_BUREAU_YEAR, NAME_INCOME_TYPE_Working, OBS_60_CNT_SOCIAL_CIRCLE, OBS_30_CNT_SOCIAL_CIRCLE, WEEKDAY_APPR_PROCESS_START_TUESDAY, WEEKDAY_APPR_PROCESS_START_FRIDAY, REGION_RATING_CLIENT, 
 REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
 
-proba_loan_is_granted = customer_score[0]
+    proba_loan_is_granted = customer_score[0]
 
-if proba_loan_is_granted >=  7.5:
-    st.success('Loan granted !', icon="✅")
-else:
-    st.error('Loan not granted :-)', icon="🚨")
-        
-        
-st.write('Le Scoring Credit du client est de : ', proba_loan_is_granted)
+    if proba_loan_is_granted >=  7.5:
+        st.success('Loan granted !', icon="✅")
+    else:
+        st.error('Loan not granted :-)', icon="🚨")
+            
+            
+    st.write('Le Scoring Credit du client est de : ', proba_loan_is_granted)
 
 
 
