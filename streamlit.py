@@ -21,9 +21,11 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied]
     
     data = pd.DataFrame([columns_df], columns=columns_df)
     
-    prediction = model.predict(data)
+    prediction = model_loaded.predict(data)
+    score = model_loaded.predict_proba(data)
     
-    return prediction[0]
+    return prediction[0], score[0] 
+    
 
 
 st.title("Loan's Attribution Predictor")
@@ -61,14 +63,19 @@ CNT_CHILDREN = st.number_input('CNT_CHILDREN:', min_value=0.000000, max_value=7.
 NAME_TYPE_SUITE_Unaccompanied = st.number_input('NAME_TYPE_SUITE_Unaccompanied:', min_value=0.000000, max_value=1.000000, value=0.818140)
 
 if st.button('Predict Loan'):
-    response_predicted = predict(EXT_SOURCE_3, EXT_SOURCE_2, PAYMENT_RATE, DAYS_ID_PUBLISH, DAYS_BIRTH, DAYS_EMPLOYED, DAYS_EMPLOYED_PERC, REGION_POPULATION_RELATIVE, DAYS_REGISTRATION, ANNUITY_INCOME_PERC, DAYS_LAST_PHONE_CHANGE, AMT_GOODS_PRICE, AMT_ANNUITY, INCOME_CREDIT_PERC, AMT_CREDIT, INCOME_PER_PERSON, AMT_INCOME_TOTAL, HOUR_APPR_PROCESS_START, CODE_GENDER, DEF_30_CNT_SOCIAL_CIRCLE, 
+    response_predicted, customer_score = predict(EXT_SOURCE_3, EXT_SOURCE_2, PAYMENT_RATE, DAYS_ID_PUBLISH, DAYS_BIRTH, DAYS_EMPLOYED, DAYS_EMPLOYED_PERC, REGION_POPULATION_RELATIVE, DAYS_REGISTRATION, ANNUITY_INCOME_PERC, DAYS_LAST_PHONE_CHANGE, AMT_GOODS_PRICE, AMT_ANNUITY, INCOME_CREDIT_PERC, AMT_CREDIT, INCOME_PER_PERSON, AMT_INCOME_TOTAL, HOUR_APPR_PROCESS_START, CODE_GENDER, DEF_30_CNT_SOCIAL_CIRCLE, 
 AMT_REQ_CREDIT_BUREAU_YEAR, NAME_INCOME_TYPE_Working, OBS_60_CNT_SOCIAL_CIRCLE, OBS_30_CNT_SOCIAL_CIRCLE, WEEKDAY_APPR_PROCESS_START_TUESDAY, WEEKDAY_APPR_PROCESS_START_FRIDAY, REGION_RATING_CLIENT, 
 REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
+
+    proba_loan_is_granted = customer_score[0]
     
-    if response_predicted == 0:
+    if proba_loan_is_granted >=  7.5:
         st.success('Loan granted !', icon="✅")
     else:
         st.error('Loan not granted :-)', icon="🚨")
+        
+        
+st.write("Le Scoring Credit du client est de : ", proba_loan_is_granted)
 
 
 
