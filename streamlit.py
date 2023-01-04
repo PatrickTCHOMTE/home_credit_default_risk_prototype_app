@@ -75,7 +75,7 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
         st.error('Loan not granted :-)', icon="🚨")
         
         
-st.write("Le Scoring Credit du client est de : ", proba_loan_is_granted)
+st.write('Le Scoring Credit du client est de : ', proba_loan_is_granted)
 
 
 
