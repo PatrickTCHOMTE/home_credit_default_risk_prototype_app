@@ -69,7 +69,7 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
 
     proba_loan_is_granted = customer_score[0]
 
-    if proba_loan_is_granted >=  7.5:
+    if proba_loan_is_granted >=  0.75:
         st.success('Loan granted !', icon="✅")
     else:
         st.error('Loan not granted :-)', icon="🚨")
