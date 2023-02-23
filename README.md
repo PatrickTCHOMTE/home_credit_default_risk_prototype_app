@@ -17,3 +17,7 @@ The data we will be using for this project is the [Capacity for customer to repa
 - **KNeighborsClassifier** for creating a model.
 
 - **Streamlit** for creating a frontend application
+
+### Link to Loan Predictor App : ###
+
+[Loan Predictor App](https://patricktchomte-home-credit-default-risk-protot-streamlit-sp2ggn.streamlit.app/)
