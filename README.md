@@ -12,7 +12,7 @@ The data we will be using for this project is the [Capacity for customer to repa
 
 ### Tools ###
 
-- **Pandas** for accessing the data, and preparing the it for modeling.
+- **Pandas** for accessing the data, and preparing them it for modeling.
 
 - **KNeighborsClassifier** for creating a model.
 
