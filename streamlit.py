@@ -79,7 +79,7 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
     st.write('Number of children the client has : ', CNT_CHILDREN)
     st.image("Number of children by clients who have obtained a loan.png")
     st.write('Rate of the region where client lives (1,2,3) : ', REGION_RATING_CLIENT)
-    st.image("Regional rating of clients who have obtained.png")
+    st.image("Regional rating of clients who have obtained a loan.png")
 
 
 
