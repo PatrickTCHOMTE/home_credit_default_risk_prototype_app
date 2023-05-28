@@ -59,7 +59,7 @@ WEEKDAY_APPR_PROCESS_START_TUESDAY = st.number_input('Weekday appr process start
 WEEKDAY_APPR_PROCESS_START_FRIDAY = st.number_input('Weekday appr process start friday:', min_value=0.000000, max_value=1.000000, value=0.166641)
 REGION_RATING_CLIENT = st.number_input('Our rating of the region where client lives (1,2,3):', min_value=1.000000, max_value=3.000000, value=2.041394)
 REGION_RATING_CLIENT_W_CITY = st.number_input('Our rating of the region where client lives with taking city into account (1,2,3):', min_value=1.000000, max_value=3.000000, value=2.019480)
-CNT_CHILDREN = st.number_input('Number of children the client has:', min_value=0.000000, max_value=7.000000, value=1)
+CNT_CHILDREN = st.number_input('Number of children the client has:', min_value=0.000000, max_value=7.000000, value=1.000000)
 NAME_TYPE_SUITE_Unaccompanied = st.number_input('Name type suite unaccompanied:', min_value=0.000000, max_value=1.000000, value=0.818140)
 
 if st.button('Predict Loan'):
