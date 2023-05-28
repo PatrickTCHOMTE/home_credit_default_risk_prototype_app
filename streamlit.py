@@ -75,11 +75,11 @@ REGION_RATING_CLIENT_W_CITY, CNT_CHILDREN, NAME_TYPE_SUITE_Unaccompanied)
         st.error('Loan not granted :-)', icon="🚨")
             
             
-    st.write('Le SCORE Credit du client est de : ', proba_loan_is_granted)
+    st.write("The loan's score of client: ", proba_loan_is_granted)
     st.write('Number of children the client has : ', CNT_CHILDREN)
-    st.image("Le nombre enfants moyen par client ayant obtenu un crédit.png")
+    st.image("Number of children by clients who have obtained a loan")
     st.write('Rate of the region where client lives (1,2,3) : ', REGION_RATING_CLIENT)
-    st.image("Classement régional des clients ayant obtenu un crédit.png")
+    st.image("Regional rating of clients who have obtained.png")
 
 
 
